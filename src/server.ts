@@ -11,6 +11,7 @@ import ownersRoutes from './routes/ownersRoutes';
 import restaurantsRoutes from './routes/restaurantsRoutes';
 import reservationsRoutes from './routes/reservationsRoutes';
 import dishesRoutes from './routes/dishesRoutes';
+import denunciasRoutes from './routes/denunciasRoutes';
 
 class Server {
     public app: express.Application;
@@ -46,7 +47,8 @@ class Server {
         this.app.use('/api/owners', ownersRoutes);
         this.app.use('/api/restaurants', restaurantsRoutes);
         this.app.use('/api/reservations', reservationsRoutes);
-        this.app.use('/api/dishes', dishesRoutes)
+        this.app.use('/api/dishes', dishesRoutes);
+        this.app.use('/api/denuncias', denunciasRoutes)
     }
 
     start() {
