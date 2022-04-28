@@ -42,8 +42,8 @@ class DenunciaRoutes {
             res.status(409).send("Denuncia already added")
         }
 
-        const {restaurant, description, amount, denunciaDate} = req.body;
-        const newDenuncia = new Denuncia({restaurant, description, amount, denunciaDate});
+        const {restaurant, description, amount} = req.body;
+        const newDenuncia = new Denuncia({restaurant, description, amount});
 
         await newDenuncia.save();
         res.status(201).send('Denuncia added');
